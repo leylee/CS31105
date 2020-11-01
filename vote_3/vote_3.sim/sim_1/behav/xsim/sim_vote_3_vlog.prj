@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../mux81/mux81.srcs/sources_1/new/mux81.v" \
+"../../../../vote_3.srcs/sources_1/new/vote_3.v" \
+"../../../../vote_3.srcs/sim_1/new/sim_vote_3.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
