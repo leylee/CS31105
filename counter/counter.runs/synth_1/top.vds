@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Nov 22 00:21:02 2020
+# Process ID: 32664
+# Current directory: C:/GitHub/CS31105/counter/counter.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/GitHub/CS31105/counter/counter.runs/synth_1/top.vds
+# Journal file: C:/GitHub/CS31105/counter/counter.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a35tcsg324-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcsg324-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19852
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1032.598 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'div_FFFF' [C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/div_FFFF.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'div_FFFF' (1#1) [C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/div_FFFF.v:23]
+INFO: [Synth 8-6157] synthesizing module 'counter12' [C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/counter12.v:23]
+INFO: [Synth 8-6157] synthesizing module 'jk' [C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/jk.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'jk' (2#1) [C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/jk.v:23]
+WARNING: [Synth 8-6896] procedural assign is inside initial block, initial block items will be ignored [C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/counter12.v:58]
+ERROR: [Synth 8-27] procedural assign not supported [C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/counter12.v:64]
+ERROR: [Synth 8-6156] failed synthesizing module 'counter12' [C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/counter12.v:23]
+ERROR: [Synth 8-6156] failed synthesizing module 'top' [C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1035.637 ; gain = 3.039
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+12 Infos, 1 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 22 00:21:24 2020...
