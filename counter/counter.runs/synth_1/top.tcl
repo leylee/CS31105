@@ -71,7 +71,10 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
+set_param synth.incrementalSynthesisCache C:/Users/leylee/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-9500-MATEBOOK-D/incrSyn
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcsg324-3
 
@@ -87,7 +90,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/counter12.v
+  C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/counter_sync.v
   C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/div_FFFF.v
   C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/jk.v
   C:/GitHub/CS31105/counter/counter.srcs/sources_1/new/top.v

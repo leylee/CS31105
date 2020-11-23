@@ -23,7 +23,7 @@
 module counter_sync(
     input clk,
     input reset,
-    output [0:4] q
+    output [3:0] q
     );
 
     wire [3:0] j;

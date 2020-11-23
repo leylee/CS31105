@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sun Nov 22 00:21:02 2020
-# Process ID: 32664
+# Start of session at: Mon Nov 23 11:02:03 2020
+# Process ID: 4456
 # Current directory: C:/GitHub/CS31105/counter/counter.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/GitHub/CS31105/counter/counter.runs/synth_1/top.vds

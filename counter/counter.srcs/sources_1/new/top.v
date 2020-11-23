@@ -27,5 +27,5 @@ module top(
     );
     wire div_clk;
     div_FFFF u_div(clk, div_clk);
-    counter12 u_counter(div_clk, reset, q);
+    counter_sync u_counter(div_clk, reset, q);
 endmodule
