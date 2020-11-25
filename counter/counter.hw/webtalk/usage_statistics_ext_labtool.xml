@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_ext_xsim.xml'  majorVersion='1' minorVersion='0' timeStamp='Tue Nov 24 23:04:52 2020'>
+<webTalkData  fileName='usage_statistics_ext_labtool.xml'  majorVersion='1' minorVersion='0' timeStamp='Mon Nov 23 15:29:46 2020'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="2902540" description="" />
-  <keyValuePair key="date_generated" value="Tue Nov 24 23:04:50 2020" description="" />
+  <keyValuePair key="date_generated" value="Sat Nov 21 17:29:05 2020" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
-  <keyValuePair key="product_version" value="XSIM v2020.1 (64-bit)" description="" />
-  <keyValuePair key="project_id" value="c2af55de7f1f440fafd007e1039a9b62" description="" />
-  <keyValuePair key="project_iteration" value="22" description="" />
+  <keyValuePair key="product_version" value="Vivado v2020.1 (64-bit)" description="" />
+  <keyValuePair key="project_id" value="d9da6743-d1fc-4801-b443-16c20395971e" description="" />
+  <keyValuePair key="project_iteration" value="1" description="" />
   <keyValuePair key="random_id" value="b9c28a99-dfc6-4154-a580-73e9745b8a99" description="" />
   <keyValuePair key="registration_id" value="b9c28a99-dfc6-4154-a580-73e9745b8a99" description="" />
   <keyValuePair key="route_design" value="FALSE" description="" />
@@ -16,7 +16,7 @@
   <keyValuePair key="target_family" value="not_applicable" description="" />
   <keyValuePair key="target_package" value="not_applicable" description="" />
   <keyValuePair key="target_speed" value="not_applicable" description="" />
-  <keyValuePair key="tool_flow" value="xsim_vivado" description="" />
+  <keyValuePair key="tool_flow" value="labtool" description="" />
  </section>
  <section name="user_environment" level="1" order="2" description="">
   <keyValuePair key="cpu_name" value="Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz" description="" />
@@ -26,19 +26,14 @@
   <keyValuePair key="system_ram" value="17.000 GB" description="" />
   <keyValuePair key="total_processors" value="1" description="" />
  </section>
- <section name="vivado_usage" level="1" order="3" description="">
+ <section name="labtool" level="1" order="3" description="">
+  <section name="usage" level="2" order="1" description="">
+   <keyValuePair key="cable" value="Xilinx-tulA/tul-tulA/15000000:" description="" />
+   <keyValuePair key="chain" value="0362D093" description="" />
+   <keyValuePair key="pgmcnt" value="00:00:00" description="" />
+  </section>
  </section>
- <section name="xsim" level="1" order="4" description="">
-  <section name="command_line_options" level="2" order="1" description="">
-   <keyValuePair key="command" value="xsim" description="" />
-  </section>
-  <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="iteration" value="2" description="" />
-   <keyValuePair key="runtime" value="1 us" description="" />
-   <keyValuePair key="simulation_memory" value="6492_KB" description="" />
-   <keyValuePair key="simulation_time" value="0.05_sec" description="" />
-   <keyValuePair key="trace_waveform" value="true" description="" />
-  </section>
+ <section name="vivado_usage" level="1" order="4" description="">
  </section>
 </section>
 </webTalkData>

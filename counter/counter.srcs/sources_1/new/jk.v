@@ -41,18 +41,18 @@ module jk(
             q <= 1;
         end
         else begin
-            case ({j, k, set, reset})
-                4'b0011: begin
+            case ({j, k})
+                2'b00: begin
                     q <= q;
                 end
-                4'b1011, 4'b0001, 4'b0101, 4'b1001, 4'b1101: begin
+                2'b01: begin
+                    q <= 0;
+                end
+                2'b10: begin
                     q <= 1;
                 end
-                4'b1111: begin
+                2'b11: begin
                     q <= ~q;
-                end
-                default: begin
-                    q <= 0;
                 end
             endcase
         end

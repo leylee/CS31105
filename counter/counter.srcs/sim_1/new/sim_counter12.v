@@ -26,7 +26,7 @@ module sim_counter12(
     reg reset;
     reg clk;
     wire [3:0] q;
-    counter12 u_counter(clk, reset, q);
+    counter_sync u_counter(clk, reset, q);
 
     initial begin
         clk = 0;
