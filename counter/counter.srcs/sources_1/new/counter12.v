@@ -55,7 +55,6 @@ module counter12(
     initial begin
         j <= 1;
         k <= 1;
-        assign jk_clk = {q[2], q[1], q[0], clk};
     end
 
     always @(negedge reset or q) begin
