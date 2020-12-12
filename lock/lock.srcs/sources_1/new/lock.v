@@ -30,7 +30,7 @@ module lock(
     output [0:7] msgseg,
     output [0:3] msgbit,
     output beep,
-    // output servo_sig,
+    output servo_sig,
     output red,
     output green,
     output blue
@@ -86,13 +86,13 @@ module lock(
     );
 
     // 舵机动作
-    // wire enable_servo;
-    // assign enable_servo = status == 5;
-    // servo unlock_servo(
-    //     .clk(clk),
-    //     .enable(enable_servo),
-    //     .pwm(servo_sig)
-    // );
+    wire enable_servo;
+    assign enable_servo = status == 5;
+    servo unlock_servo(
+        .clk(clk),
+        .enable(enable_servo),
+        .pwm(servo_sig)
+    );
 
     // 蜂鸣器
     // wire enable_beep;

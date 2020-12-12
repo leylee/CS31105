@@ -40,13 +40,13 @@ set_property PACKAGE_PIN R15 [get_ports button]
 set_property PACKAGE_PIN P17 [get_ports clk]
 
 # 舵机
-# set_property PACKAGE_PIN K13 [get_ports servo_sig]
+set_property PACKAGE_PIN G17 [get_ports servo_sig]
 # RGB
 set_property PACKAGE_PIN H17 [get_ports red]
 set_property PACKAGE_PIN K13 [get_ports green]
 set_property PACKAGE_PIN E17 [get_ports blue]
 # 蜂鸣器
-set_property PACKAGE_PIN G17 [get_ports beep]
+set_property PACKAGE_PIN H14 [get_ports beep]
 
 set_property IOSTANDARD LVCMOS33 [get_ports {pwdseg[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {pwdseg[1]}]
@@ -85,7 +85,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports rst]
 set_property IOSTANDARD LVCMOS33 [get_ports button]
 set_property IOSTANDARD LVCMOS33 [get_ports clk]
 
-# set_property IOSTANDARD LVCMOS33 [get_ports servo_sig]
+set_property IOSTANDARD LVCMOS33 [get_ports servo_sig]
 set_property IOSTANDARD LVCMOS33 [get_ports beep]
 
 set_property IOSTANDARD LVCMOS33 [get_ports red]

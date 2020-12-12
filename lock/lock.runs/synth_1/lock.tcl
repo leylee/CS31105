@@ -90,6 +90,7 @@ read_verilog -library xil_defaultlib {
   C:/GitHub/CS31105/lock/lock.srcs/sources_1/new/display_decoder.v
   C:/GitHub/CS31105/lock/lock.srcs/sources_1/new/display_driver.v
   C:/GitHub/CS31105/lock/lock.srcs/sources_1/new/reader.v
+  C:/GitHub/CS31105/lock/lock.srcs/sources_1/new/servo.v
   C:/GitHub/CS31105/lock/lock.srcs/sources_1/new/lock.v
 }
 OPTRACE "Adding files" END { }

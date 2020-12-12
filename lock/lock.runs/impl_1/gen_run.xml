@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcsg324-3" LaunchTime="1607752870">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcsg324-3" LaunchTime="1607778668">
   <File Type="BITSTR-BMM" Name="lock_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="lock_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="lock_timing_summary_init.rpt"/>
@@ -98,6 +98,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/servo.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/lock.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -106,14 +113,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/beep_driver.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/servo.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>

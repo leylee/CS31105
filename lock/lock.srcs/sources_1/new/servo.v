@@ -25,12 +25,12 @@ module servo(
     input enable,
     output pwm
     );
-    parameter RESET_TICKS = 200000;
+    parameter RESET_TICKS = 2000000;
     reg [31:0] ticks;
     wire[31:0] up_ticks;
 
     assign pwm = ticks < up_ticks;
-    assign up_ticks = enable? 32'd20000: 32'd10000;
+    assign up_ticks = enable? 32'd250000: 32'd050000;
 
     always @(negedge clk) begin
       ticks <= ticks < RESET_TICKS? ticks + 32'd1: 32'd0;

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Sat Dec 12 14:03:10 2020
+| Date         : Sat Dec 12 21:13:10 2020
 | Host         : MATEBOOK-D running 64-bit major release  (build 9200)
 | Command      : report_drc -file lock_drc_routed.rpt -pb lock_drc_routed.pb -rpx lock_drc_routed.rpx
 | Design       : lock
@@ -49,7 +49,7 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net msg_driver/segs_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin msg_driver/segs_reg[0]_LDC_i_1/O, cell msg_driver/segs_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net msg_driver/segs_reg[0]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin msg_driver/segs_reg[0]_LDC_i_1__0/O, cell msg_driver/segs_reg[0]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
@@ -69,7 +69,7 @@ Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net pwd_driver/segs_reg[0]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin pwd_driver/segs_reg[0]_LDC_i_1__0/O, cell pwd_driver/segs_reg[0]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net pwd_driver/segs_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin pwd_driver/segs_reg[0]_LDC_i_1/O, cell pwd_driver/segs_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning

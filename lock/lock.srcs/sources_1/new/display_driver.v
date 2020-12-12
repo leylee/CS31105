@@ -37,7 +37,7 @@ module display_driver(
 
     genvar i;
     for (i = 0; i < 4; i = i + 1) begin
-      assign bits[i] = (status == i);
+      assign bits[i] = (status == i) & on;
       assign digits[3 - i] = in[4*(i+1)-1 : 4*i];
     end
     generate
@@ -58,17 +58,23 @@ module display_driver(
       end
       else begin
         if (ticks < MAX_TICKS) begin
+          on <= 1'b1;
           ticks <= ticks + 32'h1;
         end
-        else if (ticks == MAX_TICKS) begin
+        else if (ticks < MAX_TICKS + 1000) begin
           ticks <= ticks + 32'h1;
           on <= 1'b0;
-          segs <= decoder_segs[status + 2'h1];
+        end
+        else if (ticks == MAX_TICKS + 1000) begin
+          ticks <= ticks + 32'h1;
+          status <= status + 2'h1;
+        end
+        else if (ticks < MAX_TICKS + 2000) begin
+          ticks <= ticks + 32'h1;
         end
         else begin
           ticks <= 31'b0;
-          status <= status + 2'h1;
-          on <= 1'b1;
+          segs <= decoder_segs[status];
         end
       end
     end
