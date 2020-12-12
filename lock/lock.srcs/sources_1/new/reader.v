@@ -59,6 +59,7 @@ module reader(
                 end
             end
             else begin
+                value <= bits;
                 if (button) begin
                     if (bits <= 4'h9) begin
                         ticks <= 32'h0;

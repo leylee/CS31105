@@ -28,7 +28,12 @@ module lock(
     output [0:7] pwdseg,
     output [0:3] pwdbit,
     output [0:7] msgseg,
-    output [0:3] msgbit
+    output [0:3] msgbit,
+    output beep,
+    // output servo_sig,
+    output red,
+    output green,
+    output blue
     );
 
     parameter FIVE_SEC_TICKS = 500000000;
@@ -79,6 +84,30 @@ module lock(
         .has_value(has_value),
         .value(value)
     );
+
+    // 舵机动作
+    // wire enable_servo;
+    // assign enable_servo = status == 5;
+    // servo unlock_servo(
+    //     .clk(clk),
+    //     .enable(enable_servo),
+    //     .pwm(servo_sig)
+    // );
+
+    // 蜂鸣器
+    // wire enable_beep;
+    // assign enable_beep = status == 6;
+    // beep_driver timeout_beep(
+    //     .clk(clk),
+    //     .enable(enable_beep),
+    //     .pwm(beep)
+    // );
+    assign beep = red;
+
+    // rgb 灯
+    assign red = (status == 3'h6) | (status == 3'h7);
+    assign blue = (status == 3'h0) | (status == 3'h1) | (status == 3'h2) | (status == 3'h3);
+    assign green = (status == 3'h5);
 
     always @(negedge clk, negedge rst) begin
         if (~rst) begin
@@ -166,10 +195,10 @@ module lock(
                     end
                     else begin
                         {msgbuf[0], msgbuf[1], msgbuf[2], msgbuf[3]} <= 16'hD02F;
-                        status <= 5;
+                        status <= 7;
                     end
                 end
-                3'h5, 3'h6: begin
+                3'h5, 3'h6, 3'h7: begin
                     if (ticks < THREE_SEC_TICKS) begin
                         ticks <= ticks + 1;
                     end

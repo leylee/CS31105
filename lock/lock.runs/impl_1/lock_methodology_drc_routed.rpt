@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Sat Dec 12 02:03:03 2020
+| Date         : Sat Dec 12 14:03:11 2020
 | Host         : MATEBOOK-D running 64-bit major release  (build 9200)
 | Command      : report_methodology -file lock_methodology_drc_routed.rpt -pb lock_methodology_drc_routed.pb -rpx lock_methodology_drc_routed.rpx
 | Design       : lock
@@ -401,7 +401,7 @@ Related violations: <none>
 
 TIMING-17#74 Critical Warning
 Non-clocked sequential cell  
-The clock pin pwd_reader/delay_reg/C is not reached by a timing clock
+The clock pin pwd_reader/delay_reg_inv/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#75 Critical Warning
@@ -969,7 +969,7 @@ Related violations: <none>
 
 LUTAR-1#8 Warning
 LUT drives async reset alert  
-LUT cell msg_driver/segs_reg[6]_LDC_i_2__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) msg_driver/segs_reg[6]_C/CLR, msg_driver/segs_reg[6]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell msg_driver/segs_reg[6]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) msg_driver/segs_reg[6]_C/CLR, msg_driver/segs_reg[6]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#9 Warning
@@ -1039,7 +1039,7 @@ Related violations: <none>
 
 LUTAR-1#22 Warning
 LUT drives async reset alert  
-LUT cell pwd_driver/segs_reg[6]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) pwd_driver/segs_reg[6]_C/CLR, pwd_driver/segs_reg[6]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell pwd_driver/segs_reg[6]_LDC_i_2__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) pwd_driver/segs_reg[6]_C/CLR, pwd_driver/segs_reg[6]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-20#1 Warning
