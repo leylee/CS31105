@@ -38,8 +38,8 @@ module sim_reader(
       .has_value(has_value),
       .value(value)
     );
-    defparam u.PUSH_DELAY_TICKS = 7;
-    defparam u.RELEASE_DELAY_TICKS = 14;
+    defparam u.PUSH_DELAY_TICKS = 14;
+    defparam u.RELEASE_DELAY_TICKS = 28;
 
     initial begin
       #1
@@ -52,11 +52,11 @@ module sim_reader(
       clk = ~clk;
     end
 
-    always #10 begin
+    always #20 begin
       bits = bits + 1;
     end
 
-    always #3 begin
+    always #6 begin
       button = ~button;
     end
 endmodule

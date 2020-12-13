@@ -36,11 +36,12 @@ module sim_display_driver(
         .rst(rst)
     );
     defparam u.MAX_TICKS = 10;
+    defparam u.DELAY_TICKS = 3;
 
     initial begin
         nums[0] = 4'h3;
         nums[1] = 4'h1;
-        nums[2] = 4'h8;
+        nums[2] = 4'h6;
         nums[3] = 4'h8;
         rst = 1;
         #1
@@ -49,6 +50,10 @@ module sim_display_driver(
         rst = 1;
         #1
         clk = 0;
+    end
+
+    always #300 begin
+        {nums[0], nums[1], nums[2], nums[3]} <= {nums[0], nums[1], nums[2], nums[3]} + 16'h55;
     end
 
     always #1 begin

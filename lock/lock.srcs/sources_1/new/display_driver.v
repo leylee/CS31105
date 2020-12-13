@@ -28,6 +28,7 @@ module display_driver(
     input rst
     );
     parameter MAX_TICKS = 200000;
+    parameter DELAY_TICKS = 1000;
     wire [3:0] digits[0:3];
     wire [0:7] decoder_segs[0:3];
     
@@ -61,15 +62,15 @@ module display_driver(
           on <= 1'b1;
           ticks <= ticks + 32'h1;
         end
-        else if (ticks < MAX_TICKS + 1000) begin
+        else if (ticks < MAX_TICKS + DELAY_TICKS) begin
           ticks <= ticks + 32'h1;
           on <= 1'b0;
         end
-        else if (ticks == MAX_TICKS + 1000) begin
+        else if (ticks == MAX_TICKS + DELAY_TICKS) begin
           ticks <= ticks + 32'h1;
           status <= status + 2'h1;
         end
-        else if (ticks < MAX_TICKS + 2000) begin
+        else if (ticks < MAX_TICKS + DELAY_TICKS + DELAY_TICKS) begin
           ticks <= ticks + 32'h1;
         end
         else begin
