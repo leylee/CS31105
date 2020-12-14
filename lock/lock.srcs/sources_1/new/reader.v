@@ -30,8 +30,8 @@ module reader(
     );
     parameter PUSH_DELAY_TICKS = 5000000;
     parameter RELEASE_DELAY_TICKS = 10000000;
-    reg [31:0] ticks;
-    reg delay;
+    reg [31:0] ticks = 32'd0;
+    reg delay = 1'b1;
 
     // assign has_value = delay;
 

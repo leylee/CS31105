@@ -1,0 +1,8 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"sim_servo_time_impl.v" \
+"../../../../../lock.srcs/sources_1/new/servo.v" \
+"../../../../../lock.srcs/sim_1/new/sim_servo.v" \
+
+# Do not sort compile order
+nosort

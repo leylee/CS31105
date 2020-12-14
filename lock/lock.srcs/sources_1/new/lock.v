@@ -34,19 +34,19 @@ module lock(
     output red,
     output green,
     output blue
-    );
+);
 
     parameter FIVE_SEC_TICKS = 500000000;
     parameter THREE_SEC_TICKS = 300000000;
     parameter PASSWORD = 16'h2077;
 
-    reg [15:0] password;
-    reg [7:0] error_times;
+    reg [15:0] password = PASSWORD;
+    reg [7:0] error_times = 8'h0;
 
     // 时钟计数器
-    reg[31:0] ticks;
+    reg[31:0] ticks = 32'h0;
     // 判断当前能否接收按键
-    reg readable;
+    reg readable = 1'b1;
 
     // reset 信号, softrst 用于向其他元件发送重置信号
     reg softrst;
@@ -56,7 +56,7 @@ module lock(
     // 密码存储缓冲区
     reg [3:0] pwd[0:3];
     // 密码下一位的位置
-    reg [3:0] status;
+    reg [3:0] status = 0;
     // 密码显示数据缓冲区
     reg [3:0] pwdbuf[0:3];
     // 提示信息显示数据缓冲区
